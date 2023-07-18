@@ -20,6 +20,12 @@ public class StackClass {
 		}
 	}
 	
+	public void display() {
+		for(int i=top ; i>=0 ; i--) {
+			System.out.println(stack[i]);
+		}
+	}
+	
 	public static void main(String[] args) {
 		StackClass stackClass = new StackClass();
 		stackClass.push();
@@ -27,7 +33,7 @@ public class StackClass {
 		stackClass.push();
 		stackClass.push();
 		stackClass.push();
-		stackClass.push();
+		stackClass.display();
 	}
 
 }
