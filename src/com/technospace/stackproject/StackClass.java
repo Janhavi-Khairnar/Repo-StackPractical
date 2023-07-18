@@ -26,6 +26,16 @@ public class StackClass {
 		}
 	}
 	
+	public void pop() {
+		if(top == -1){
+			System.out.println("Stack is underflow.");
+		} else{
+			System.out.println("");
+			top--;
+		}
+	}
+	
+	
 	public static void main(String[] args) {
 		StackClass stackClass = new StackClass();
 		stackClass.push();
@@ -34,6 +44,8 @@ public class StackClass {
 		stackClass.push();
 		stackClass.push();
 		stackClass.display();
+		stackClass.pop();
+		stackClass.pop();
 	}
 
 }
