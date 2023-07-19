@@ -30,7 +30,7 @@ public class StackClass {
 		if(top == -1){
 			System.out.println("Stack is underflow.");
 		} else{
-			System.out.println("");
+			System.out.println("Element Pop :"+stack[top]);
 			top--;
 		}
 	}
@@ -38,14 +38,30 @@ public class StackClass {
 	
 	public static void main(String[] args) {
 		StackClass stackClass = new StackClass();
-		stackClass.push();
-		stackClass.push();
-		stackClass.push();
-		stackClass.push();
-		stackClass.push();
-		stackClass.display();
-		stackClass.pop();
-		stackClass.pop();
+	
+		Scanner sc = new Scanner(System.in);
+		
+		int choice;
+		do{
+			System.out.println("*** Stack Index ***");
+			System.out.println("1)Push \n2)Display \n3)Pop \n4)Exit.");
+			System.out.println("Enter which operation would you perform :");
+			choice = sc.nextInt();
+			
+			switch(choice) 
+			{
+				case 1:
+					stackClass.push();
+					break;
+				case 2:
+					stackClass.display();
+					break;
+				case 3:
+					stackClass.pop();
+					break;
+				default:
+					System.out.println("Please enter the number between 1 to 3.");
+			}
+		}while(choice != 5);
 	}
-
 }
